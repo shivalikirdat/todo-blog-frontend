@@ -10,29 +10,41 @@
   <header>
     <h1>Todo Manager</h1>
   </header>
-  <main>
-    <form id="task-form">
-      <input type="text" id="task-input" placeholder="Enter new task..." required />
-      <input type="date" id="due-date" />
-      <select id="priority">
-        <option value="Low">Low Priority</option>
-        <option value="Medium">Medium Priority</option>
-        <option value="High">High Priority</option>
-      </select>
-      <button type="submit">Add Task</button>
-    </form>
 
-    <section id="filters">
-      <button data-filter="all" class="filter-btn">All</button>
-      <button data-filter="completed" class="filter-btn">Completed</button>
-      <button data-filter="pending" class="filter-btn">Pending</button>
+  <main>
+    <section class="task-creator">
+      <h2>Add New Task</h2>
+      <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter new task..." required />
+        <input type="date" id="due-date" />
+        <select id="priority">
+          <option value="Low">Low Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
     </section>
 
-    <ul id="task-list"></ul>
+    <section class="task-filters">
+      <h2>Filter Tasks</h2>
+      <div class="filters">
+        <button data-filter="all" class="filter-btn">All</button>
+        <button data-filter="completed" class="filter-btn">Completed</button>
+        <button data-filter="pending" class="filter-btn">Pending</button>
+      </div>
+    </section>
+
+    <section class="task-list-section">
+      <h2>Your Tasks</h2>
+      <ul id="task-list"></ul>
+    </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Todo Manager</p>
   </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
