@@ -1,0 +1,46 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+
+/* Blog post card */
+.post-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.post-card .post-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.post-card .post-title:hover {
+    text-decoration: underline;
+}
+
+.post-card .post-content {
+    margin-bottom: 0.5rem;
+}
+
+.post-card .post-actions button {
+    margin-right: 0.5rem;
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+    #postsList {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+}
