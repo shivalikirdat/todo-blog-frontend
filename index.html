@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Todo Manager</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -13,16 +13,22 @@
   <main>
     <form id="task-form">
       <input type="text" id="task-input" placeholder="Enter new task..." required />
+      <input type="date" id="due-date" />
+      <select id="priority">
+        <option value="Low">Low Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="High">High Priority</option>
+      </select>
       <button type="submit">Add Task</button>
     </form>
-    
+
     <section id="filters">
-      <!-- Optional filters go here -->
+      <button data-filter="all" class="filter-btn">All</button>
+      <button data-filter="completed" class="filter-btn">Completed</button>
+      <button data-filter="pending" class="filter-btn">Pending</button>
     </section>
 
-    <ul id="task-list">
-      <!-- Tasks will be rendered here -->
-    </ul>
+    <ul id="task-list"></ul>
   </main>
   <footer>
     <p>&copy; 2025 Todo Manager</p>
